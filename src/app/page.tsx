@@ -177,6 +177,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Browse by State */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-gray-900 mb-4 text-center">
+            Find ABA Therapy Providers by State
+          </h2>
+          <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+            ABA Quality Index is expanding state by state. Select a state below to see ranked ABA therapy providers in your area.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            <Link
+              href="/best-aba-therapy-colorado"
+              className="bg-white border border-gray-200 rounded-lg p-5 hover:border-primary hover:shadow-sm transition-all text-center"
+            >
+              <span className="font-heading font-semibold text-gray-900 block">Colorado</span>
+              <span className="text-xs text-gray-500 mt-1 block">12 providers</span>
+            </Link>
+            {/* More states added as data is collected */}
+            {["Texas", "California", "Florida", "New York", "Pennsylvania", "Ohio"].map((state) => (
+              <div
+                key={state}
+                className="bg-gray-50 border border-dashed border-gray-300 rounded-lg p-5 text-center opacity-60"
+              >
+                <span className="font-heading font-medium text-gray-400 block">{state}</span>
+                <span className="text-xs text-gray-400 mt-1 block">Coming soon</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-primary">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
